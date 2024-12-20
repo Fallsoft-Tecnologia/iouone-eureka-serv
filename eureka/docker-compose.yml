@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  eureka-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "7073:7073"
+networks:
+  ms-network:
+    driver: bridge
