@@ -6,7 +6,10 @@ services:
       dockerfile: Dockerfile
     container_name: eureka-server
     ports:
-      - "7073:7073"
+      - 8761:8761
+    networks:
+      - backend
 networks:
-  ms-network:
+  backend:
+    name: backend
     driver: bridge
